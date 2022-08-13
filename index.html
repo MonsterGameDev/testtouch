@@ -8,6 +8,7 @@
     <style>
       .ydre {
         position: relative;
+        top: 100px;
 
         width: 30vw;
         height: 30vw;
@@ -40,7 +41,7 @@
       <div class="container"></div>
     </div>
 
-    <h2>LOG-5</h2>
+    <h2>LOG-6</h2>
     <div id="log"></div>
   </body>
   <script>
@@ -69,7 +70,14 @@
           "</br>" +
           "e.touches[0].target: " +
           e.touches[0].target +
-          "<br>")
+          "e.targetTouches: " +
+          e.targetTouches +
+          "<br>" +
+          "e.targetTouches[0]: " +
+          e.targetTouches[0] +
+          "<br>" +
+          "e.targetTouches[0].clientX" +
+          e.targetTouches[0].clientX)
     );
   </script>
 </html>
