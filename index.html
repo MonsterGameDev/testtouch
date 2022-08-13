@@ -35,11 +35,12 @@
     </style>
   </head>
   <body>
+    <div style="width: 100%; height: 200vh; background: yellow"></div>
     <div class="ydre">
       <div class="container"></div>
     </div>
 
-    <h2>LOG-9</h2>
+    <h2>LOG-10</h2>
     <div id="log"></div>
   </body>
   <script>
@@ -49,18 +50,16 @@
 
     container.addEventListener("touchmove", (e) => {
       e.preventDefault();
-     
-      const rect = e.touches[0].target.getBoundingClientRect();
-    
-      position = {
-            x: e.targetTouches[0].clientX - rect.x,
-            y: e.targetTouches[0].clientY - rect.y
-        }
-     
-     
-      log.innerHTML = 'offsetX: ' + position.x + "<br>" +
-        'offsetY: ' + position.y
-    });
 
+      const rect = e.touches[0].target.getBoundingClientRect();
+
+      position = {
+        x: e.targetTouches[0].clientX - rect.x,
+        y: e.targetTouches[0].clientY - rect.y,
+      };
+
+      log.innerHTML =
+        "offsetX: " + position.x + "<br>" + "offsetY: " + position.y;
+    });
   </script>
 </html>
