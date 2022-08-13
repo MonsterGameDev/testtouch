@@ -13,7 +13,7 @@
         margin: 100px 0 0 20px;
         border: 2px solid green;
         height: 50vh;
-    }
+      }
 
       .container {
         width: 100%;
@@ -39,7 +39,7 @@
       <div class="container"></div>
     </div>
 
-    <h2>LOG-6</h2>
+    <h2>LOG-7</h2>
     <div id="log"></div>
   </body>
   <script>
@@ -49,34 +49,47 @@
 
     container.addEventListener("touchmove", (e) => {
       e.preventDefault();
+      const rect = e.touches[0].target.getBoundingClientRect();
       log.innerHTML =
         "e.touches.length: " +
         e.touches.length +
         "<br>" +
-        "e.touches[0].clientX: " +
-        e.touches[0].clientX +
-        "</br>" +
-        "e.touches[0].clientY: " +
-        e.touches[0].clientY +
-        "</br>" +
-        "e.touches[0].pageX: " +
-        e.touches[0].pageX +
-        "</br>" +
-        "e.touches[0].pageY: " +
-        e.touches[0].pageY +
-        "</br>" +
-        "e.touches[0].target: " +
-        e.touches[0].target +
         "e.targetTouches: " +
         e.targetTouches +
         "<br>" +
-        "e.targetTouches[0]: " +
-        e.targetTouches[0] +
-        "<br>" +
+        "clientX: " +
+        e.touches[0].clientX +
+        "</br>" +
+        ".pageX: " +
+        e.touches[0].pageX +
+        "<br>"
         "e.targetTouches[0].clientX" +
         e.targetTouches[0].clientX +
-        "<br>";
-      "e.targetTouches[0].clientY" + e.targetTouches[0].clientY;
+        "<br>" +
+        "clientY: " +
+        e.touches[0].clientY +
+        "</br>" +
+        "pageY: " +
+        e.touches[0].pageY +
+        "</br>" +
+        "target: " +
+        e.touches[0].target +
+        "<br>" +
+        "e.targetTouches[0].clientY" +
+        e.targetTouches[0].clientY
+        + "<br>"
+        + "rect.x: " + rect.x 
+        + "<br>"
+        + "rect.y: " + rect.y
+        + "<br>"
+        + "rect.top: " + rect.top
+        + "<br>"
+        + "rect.left: " + rect.left
+        + "<br>"
+        + "rect.left: " + rect.bottom
+        + "<br>"
+        + "rect.left: " + rect.right
+    
     });
   </script>
 </html>
