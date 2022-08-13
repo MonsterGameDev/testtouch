@@ -27,7 +27,7 @@
   </head>
   <body>
     <div class="container"></div>
-
+    <h2>LOG</h2>
     <div id="log"></div>
   </body>
   <script>
@@ -37,7 +37,23 @@
 
     container.addEventListener(
       "click",
-      (e) => (log.innerHTML = "Target: " + e.target)
+      (e) =>
+        (log.innerHTML =
+          "Target: " +
+          e.target +
+          "<br>" +
+          "e.offsetX: " +
+          e.offsetX +
+          "<br>" +
+          "e.offsetY: " +
+          e.offsetY +
+          "<br>" +
+          "e.target.offsetX:" +
+          e.target.offsetX +
+          "<br>" +
+          "e.target.offsetY:" +
+          e.target.offsetY +
+          "<br>")
     );
   </script>
 </html>
