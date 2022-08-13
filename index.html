@@ -8,14 +8,12 @@
     <style>
       .ydre {
         position: relative;
-        top: 100px;
-
         width: 30vw;
         height: 30vw;
-        margin: 20px;
-
+        margin: 100px 0 0 20px;
         border: 2px solid green;
-      }
+        height: 50vh;
+    }
 
       .container {
         width: 100%;
@@ -50,7 +48,7 @@
     const log = document.getElementById("log");
 
     container.addEventListener("touchmove", (e) => {
-        e.preventDefault()
+      e.preventDefault();
       log.innerHTML =
         "e.touches.length: " +
         e.touches.length +
@@ -76,7 +74,9 @@
         e.targetTouches[0] +
         "<br>" +
         "e.targetTouches[0].clientX" +
-        e.targetTouches[0].clientX;
+        e.targetTouches[0].clientX +
+        "<br>";
+      "e.targetTouches[0].clientY" + e.targetTouches[0].clientY;
     });
   </script>
 </html>
