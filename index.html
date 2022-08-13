@@ -49,35 +49,34 @@
     const container = document.querySelector(".container");
     const log = document.getElementById("log");
 
-    container.addEventListener(
-      "touchmove",
-      (e) =>
-        (log.innerHTML =
-          "e.touches.length: " +
-          e.touches.length +
-          "<br>" +
-          "e.touches[0].clientX: " +
-          e.touches[0].clientX +
-          "</br>" +
-          "e.touches[0].clientY: " +
-          e.touches[0].clientY +
-          "</br>" +
-          "e.touches[0].pageX: " +
-          e.touches[0].pageX +
-          "</br>" +
-          "e.touches[0].pageY: " +
-          e.touches[0].pageY +
-          "</br>" +
-          "e.touches[0].target: " +
-          e.touches[0].target +
-          "e.targetTouches: " +
-          e.targetTouches +
-          "<br>" +
-          "e.targetTouches[0]: " +
-          e.targetTouches[0] +
-          "<br>" +
-          "e.targetTouches[0].clientX" +
-          e.targetTouches[0].clientX)
-    );
+    container.addEventListener("touchmove", (e) => {
+        e.preventDefault()
+      log.innerHTML =
+        "e.touches.length: " +
+        e.touches.length +
+        "<br>" +
+        "e.touches[0].clientX: " +
+        e.touches[0].clientX +
+        "</br>" +
+        "e.touches[0].clientY: " +
+        e.touches[0].clientY +
+        "</br>" +
+        "e.touches[0].pageX: " +
+        e.touches[0].pageX +
+        "</br>" +
+        "e.touches[0].pageY: " +
+        e.touches[0].pageY +
+        "</br>" +
+        "e.touches[0].target: " +
+        e.touches[0].target +
+        "e.targetTouches: " +
+        e.targetTouches +
+        "<br>" +
+        "e.targetTouches[0]: " +
+        e.targetTouches[0] +
+        "<br>" +
+        "e.targetTouches[0].clientX" +
+        e.targetTouches[0].clientX;
+    });
   </script>
 </html>
